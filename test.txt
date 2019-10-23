@@ -1,0 +1,5 @@
+Project Planner, a wechat mini program.
+
+Test git tools here.
+
+Tested by Joker  23rd, Oct., 2019
