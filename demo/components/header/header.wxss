@@ -1,0 +1,44 @@
+.header{
+    display: flex;
+    align-items: center;
+    padding: 10rpx;
+    background-color: #fff;
+}
+.logo{
+    flex: 7;
+}
+.logo>image{
+    width: 140rpx;
+    height: 60rpx;
+}
+.search_icon{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search_icon>image{
+    width: 60rpx;
+    height: 60rpx;
+}
+.user_icon{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user_icon>image{
+    width: 60rpx;
+    height: 60rpx;
+}
+.download_app{
+    flex: 3;
+    font-size: 30rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f45a8d;
+    color: #fff;
+    border-radius: 10rpx;
+    padding: 10rpx;
+}

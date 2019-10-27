@@ -1,0 +1,18 @@
+<view class="header">
+    <!-- logo -->
+    <navigator class="logo">
+        <image src="../../icons/logo.png" />
+    </navigator>
+    <!-- search -->
+    <view class="search_icon">
+        <image src="../../icons/search.png" />
+    </view>
+    <!-- user -->
+    <view class="user_icon">
+        <image src="../../icons/user.png" />
+    </view>
+    <!-- download app -->
+    <view class="download_app">
+        下载 APP
+    </view>
+</view>
