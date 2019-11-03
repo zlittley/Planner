@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="section">
+    <text>工作时长（分钟）</text>
+    <view>
+      <slider bindchange="changeWorkTime" show-value="true" min="5" max="60" value="{{workTime}}"></slider>
+    </view>
+  </view>
+  <view class="section">
+    <text>休息时长（分钟）</text>
+    <view>
+      <slider bindchange="changeRestTime" show-value="true" min="5" max="60" value="{{restTime}}"></slider>
+    </view>
+  </view>
+  <button bindtap="completeSetting">设置完成</button>
+</view>

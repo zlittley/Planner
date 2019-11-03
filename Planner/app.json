@@ -1,16 +1,54 @@
 {
-  "pages":[
-    "pages/plan/plan",
-    "pages/goal/goal",
-    "pages/timer/timer",
+  "pages": [
     "pages/me/me",
+    "pages/setTimer/setTimer",
+    "pages/timer/timer",    
+    "pages/plan/plan",
+    "pages/goal/goal",    
     "pages/index/index",
-    "pages/logs/logs"    
+    "pages/logs/logs",
+    "pages/addPlan/addPlan",
+    "pages/totalTime/totalTime",
+   "pages/anniversaries/anniversaries",
+    "pages/themes/themes",
+    "pages/feedback/feedback",
+    "pages/aboutUs/aboutUs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  }
+    "navigationBarTitleText": "Planner",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/plan/plan",
+        "text": "计划",
+        "iconPath": "icons/plan.png",
+        "selectedIconPath": "icons/plan_active.png"
+      },
+      {
+        "pagePath": "pages/goal/goal",
+        "text": "目标",
+        "iconPath": "icons/goal.png",
+        "selectedIconPath": "icons/goal_active.png"
+      },
+      {
+        "pagePath": "pages/timer/timer",
+        "text": "番茄钟",
+        "iconPath": "icons/timer.png",
+        "selectedIconPath": "icons/timer_active.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我",
+        "iconPath": "icons/me.png",
+        "selectedIconPath": "icons/me_active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
 }

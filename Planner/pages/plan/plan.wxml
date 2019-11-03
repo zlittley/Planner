@@ -1,3 +1,4 @@
 <view>
-  This is the Plan page.
+  This is the page Plan.
 </view>
+<tabbar tabbar="{{tabbar}}"></tabbar>

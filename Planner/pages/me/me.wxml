@@ -1,2 +1,50 @@
-<!--pages/me/me.wxml-->
-<text>pages/me/me.wxml</text>
+<view class="container">
+  <view class="body">
+    <view class="section section-userinfo">
+      <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+        <block wx:else>
+          <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+      </view>
+    </view>
+    <view class="section">
+      <navigator class="item" url="../totalTime/totalTime">
+        <view class="item-icon-info">
+          <image src="../../icons/total.png"></image>
+          <text>计划时长统计</text>
+        </view>
+        <image src="../../icons/more.png" class="icon-more"></image>
+      </navigator>
+    </view>
+    <view class="section">
+      <navigator class="item" url="../setTimer/setTimer">
+        <view class="item-info">番茄钟设置</view>
+        <image src="../../icons/more.png" class="icon-more"></image>
+      </navigator>  
+      <view class="divLine"></view>
+      <navigator class="item" url="../anniversaries/anniversaries">
+        <view class="item-info">特殊日期</view>
+        <image src="../../icons/more.png" class="icon-more"></image>
+      </navigator>
+      <view class="divLine"></view>
+      <navigator class="item" url="../themes/themes">
+        <view class="item-info">主题设置</view>
+        <image src="../../icons/more.png" class="icon-more"></image>
+      </navigator>      
+    </view>
+    <view class="section">
+      <navigator class="item" url="../feedback/feedback">
+        <view class="item-info">意见反馈</view>        
+        <image src="../../icons/more.png" class="icon-more"></image>
+      </navigator>
+      <view class="divLine"></view>
+      <navigator class="item" url="../aboutUs/aboutUs">
+        <view class="item-info">关于我们</view>        
+        <image src="../../icons/more.png" class="icon-more"></image>
+      </navigator>
+    </view>
+  </view>
+  <tabbar tabbar="{{tabbar}}"></tabbar>
+</view>

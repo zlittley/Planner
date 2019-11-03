@@ -1,2 +1,4 @@
-<!--pages/goal/goal.wxml-->
-<text>pages/goal/goal.wxml</text>
+<view>
+    This is page Goal.
+</view>
+<tabbar tabbar="{{tabbar}}"></tabbar>
