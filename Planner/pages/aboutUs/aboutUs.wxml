@@ -1,4 +1,23 @@
-<view>About Us</view>
-<view>This is a time management mini program.</view>
-<view>Designed by @CodeWriters</view>
-<view>Github address: https://github.com/zlittley/Planner</view>
+<view class="container">
+  <view class="section">
+    <text>作者</text>
+    <view class="divLine"></view>
+    <view class="item">
+      <text>CodeWriters - 代码作家</text>      
+    </view>
+  </view>
+  <view class="section">
+    <text>软件介绍</text>
+    <view class="divLine"></view>
+    <view class="item">
+      <text>Planner时间管理微信小程序</text>
+    </view>
+  </view>
+  <view class="section">
+    <text>Github地址</text>
+    <view class="divLine"></view>
+    <view class="item">
+      <text>https://github.com/zlittley/Planner</text>
+    </view>
+  </view>
+</view>

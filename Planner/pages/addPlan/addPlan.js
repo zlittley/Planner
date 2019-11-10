@@ -5,7 +5,34 @@ Page({
    * 页面的初始数据
    */
   data: {
+    date_from:'2019-11-11',
+    time_from:'00:00',
+    date_to:'2019-11-11',
+    time_to:'23:59'
+  },
 
+  bindDateFromChange:function(e){
+    this.setData({
+      date_from:e.detail.value
+    })
+  },
+
+  bindTimeFromChange: function (e) {
+    this.setData({
+      time_from: e.detail.value
+    })
+  },
+
+  bindDateToChange: function (e) {
+    this.setData({
+      date_to: e.detail.value
+    })
+  },
+
+  bindTimeToChange: function (e) {
+    this.setData({
+      time_to: e.detail.value
+    })
   },
 
   /**
@@ -57,10 +84,9 @@ Page({
 
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  confirmAdd: function (e) {
+    wx.switchTab({
+      url: '../plan/plan',
+    })
   }
 })

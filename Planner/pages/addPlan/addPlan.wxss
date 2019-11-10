@@ -1,1 +1,62 @@
 /* pages/addPlan/addPlan.wxss */
+.item{
+  display: flex;
+  padding: 20rpx; 
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-icon-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 25rpx;
+  font-size: 25rpx;
+}
+
+.item-icon-info image{
+  height: 30rpx;
+  width: 30rpx;
+  margin-right: 10rpx;
+}
+
+.item-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 25rpx;
+  font-size: 25rpx;
+}
+
+.icon-more{
+  height: 25rpx;
+  width: 25rpx;
+}
+
+.picker{
+  padding: 0 20rpx;
+  font-size: 28rpx;
+}
+
+.picker-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+}
+
+textarea{
+  padding: 20rpx;
+}
+
+button {
+  height: 80rpx;
+  width: 400rpx;
+  margin-top: 50rpx;
+  background-color: #fff;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
