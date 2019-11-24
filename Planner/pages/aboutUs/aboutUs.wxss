@@ -1,1 +1,8 @@
 /* pages/aboutUs/aboutUs.wxss */
+
+.item{
+  display: flex;
+  padding: 20rpx; 
+  justify-content: space-between;
+  align-items: center;
+}

@@ -20,6 +20,7 @@ Page({
       data: e.detail.value
     })
   },
+  
   completeSetting: function(e){
     //要跳转的页面在tabBar中，此处用switchTab实现跳转
     wx.switchTab({
