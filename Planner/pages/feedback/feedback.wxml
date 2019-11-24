@@ -1,2 +1,19 @@
-<view>Suggestion Feedback</view>
-<view>But now, we don't have a way to get your suggestion...</view>
+<view >  
+    <!--轮播图-->
+      <swiper class="lunbo" indicator-dots="true" autoplay="true" interval="4000">
+        <swiper-item> <image class="image" src='../../icons/lb1.jpg'></image> </swiper-item>
+        <swiper-item> <image class="image" src='../../icons/lb2.jpg'></image></swiper-item>
+        <swiper-item> <image class="image" src='../../icons/lb3.jpg'></image> </swiper-item>
+      </swiper>
+</view>
+<view class="container">
+  <view class="section">
+    <text>请输入您宝贵的建议:</text>
+    <textarea type="text" bindinput="textinput">
+      <text class="botsum">您已输入{{info}}个字符</text>
+    </textarea> 
+  </view>
+  <button bindtap="">提交</button>
+</view>
+
+

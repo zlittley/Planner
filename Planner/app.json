@@ -9,7 +9,7 @@
     "pages/logs/logs",
     "pages/addPlan/addPlan",
     "pages/totalTime/totalTime",
-   "pages/anniversaries/anniversaries",
+    "pages/anniversaries/anniversaries",
     "pages/themes/themes",
     "pages/feedback/feedback",
     "pages/aboutUs/aboutUs"
