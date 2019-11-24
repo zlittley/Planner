@@ -2,17 +2,18 @@
   "pages": [
     "pages/me/me",
     "pages/setTimer/setTimer",
-    "pages/timer/timer",    
+    "pages/timer/timer",
     "pages/plan/plan",
-    "pages/goal/goal",    
+    "pages/goal/goal",
     "pages/index/index",
     "pages/logs/logs",
     "pages/addPlan/addPlan",
     "pages/totalTime/totalTime",
-   "pages/anniversaries/anniversaries",
+    "pages/anniversaries/anniversaries",
     "pages/themes/themes",
     "pages/feedback/feedback",
-    "pages/aboutUs/aboutUs"
+    "pages/aboutUs/aboutUs",
+    "pages/addGoal/addGoal"
   ],
   "window": {
     "backgroundTextStyle": "light",

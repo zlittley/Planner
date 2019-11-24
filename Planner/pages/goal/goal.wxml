@@ -1,4 +1,9 @@
-<view>
-    This is page Goal.
+<view class="container">
+  <!-- 循环渲染 -->
+  <navigator wx:for="{{goals}}" class="section item" url="#">
+    <view class="item-info">{{item.title}}</view>
+    <view class="item-info">完成度：{{item.done}}/{{item.total}}</view>
+  </navigator>
+  <button bindtap="navigateToAddGoal" class="btn-newgoal">新建目标</button>
 </view>
 <tabbar tabbar="{{tabbar}}"></tabbar>

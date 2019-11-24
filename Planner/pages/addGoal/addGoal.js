@@ -1,40 +1,32 @@
-const app = getApp();
-// pages/goal/goal.js
+// pages/addGoal/addGoal.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    goals:[
-      {
-        id: 1,
-        title: '读书7本书',
-        done: 1,
-        total: 7
-      },
-      {
-        id: 2,
-        title: '读书7本书',
-        done: 1,
-        total: 7
-      },
-      {
-        id: 3,
-        title: '读书7本书',
-        done: 1,
-        total: 7
-      }
-    ],
-    tabbar:{}
+    curId: 0,
+    goalCountTypes: [
+      { name: '数量', checked: true },
+      { name: '时间', checked: false },
+      { name: '百分比', checked: false }
+    ]
   },
 
-  navigateToAddGoal:function(){
-    wx.navigateTo({
-      url: '../addGoal/addGoal',
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
+  // radio-group绑定的事件，实现tab标签效果
+  radioChange: function (res) {
+    // console.log("选中的标签：" + res.detail.value);
+    var arrs = this.data.goalCountTypes;
+    var that = this;
+    for (const i in arrs) {
+      if (arrs[i].name == res.detail.value) {
+        arrs[i].checked = true;
+      } else {
+        arrs[i].checked = false;
+      }
+    }
+    that.setData({
+      goalCountTypes: arrs
     })
   },
 
@@ -42,21 +34,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    app.editTabbar();
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    app.hidetabbar();
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    app.hidetabbar();
+
   },
 
   /**

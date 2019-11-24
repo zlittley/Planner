@@ -1,1 +1,69 @@
 /* pages/plan/plan.wxss */
+/* .date{
+  margin-bottom: 10px;
+  background: #fff;
+  padding: 5px 10px;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+} */
+
+.section{
+  margin-left: 20rpx;
+  display: flex;
+  padding: 20rpx; 
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .icon-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+} */
+
+checkbox{
+  transform:scale(0.8);
+}
+
+.plan-name{
+  margin: 0 20rpx;
+  font-size: 30rpx;
+  width: 400rpx;
+  /* 以下是让text中的文字只能单行显示，并且超出部分用省略号代替 */
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;  
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+}
+
+.plan-time{
+  margin: 0 10rpx;
+  display: flex;
+  flex-direction: column;
+  /* font-size: 25rpx; */
+}
+
+/* .divLine-vertical{
+  background: #E0E3DA;
+  width: 1px;
+  height: 100%;
+  margin: 0px 5px;
+} */
+
+.icon-more{
+  height: 35rpx;
+  width: 35rpx;
+}

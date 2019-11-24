@@ -1,0 +1,80 @@
+/* pages/addGoal/addGoal.wxss */
+.item{
+  display: flex;
+  padding: 20rpx; 
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-icon-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 25rpx;
+  font-size: 25rpx;
+}
+
+.item-icon-info image{
+  height: 30rpx;
+  width: 30rpx;
+  margin-right: 10rpx;
+}
+
+.item-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 25rpx;
+  font-size: 25rpx;
+}
+
+.radio-container radio-group{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 400rpx;
+}
+
+.radio-container view{  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio-container radio{
+  transform:scale(0.5);
+}
+
+textarea{
+  padding: 20rpx;
+}
+
+button {
+  height: 80rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.btn-cancel{
+  background-color: rgb(245, 6, 6);
+  width: 48%;
+}
+
+.btn-confirm{
+  background-color: #fff;
+  width: 48%;
+}
+
+.btn-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

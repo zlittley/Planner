@@ -1,4 +1,23 @@
-<view>
-  This is the page Plan.
+<view class="container">
+  <!-- 怎么解决？ -->
+  <!-- <view class="date">2019年11月11日</view> -->
+  <!-- 用5层三目运算符嵌套实现动态显示边框颜色，不好 -->
+  <view wx:for="{{array_plan}}" class="section" style="border-left: {{(item.type=='工作')?array_color[0]:(item.type=='学习')?array_color[1]:(item.type=='娱乐')?array_color[2]:(item.type=='运动')?array_color[3]:(item.type=='休息')?array_color[4]:array_color[5]}} 15rpx solid">
+    <view class="plan-container">
+      <checkbox checked="item.isCompleted"></checkbox>
+      <view class="plan-time">
+        <!-- <text>{{item.date_from}} {{item.time_from}}</text>
+        <text>{{item.date_to}} {{item.time_to}}</text> -->
+        <text>{{item.time_from}}</text>
+        <text>{{item.time_to}}</text>
+      </view>
+      <text class="plan-name">{{item.name}}</text>    
+    </view>
+    <!-- <view class="icon-container">
+      <view class="divLine-vertical"></view>
+      <navigator><image src="../../icons/plan_more.png" class="icon-more"></image></navigator>
+    </view> -->
+    <navigator><image src="../../icons/plan_more.png" class="icon-more"></image></navigator>
+  </view>
 </view>
 <tabbar tabbar="{{tabbar}}"></tabbar>

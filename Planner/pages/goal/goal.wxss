@@ -1,1 +1,18 @@
 /* pages/goal/goal.wxss */
+.btn-newgoal{
+  height: 80rpx;
+  /* width: 400rpx;
+  margin-top: 30rpx;
+  background-color: #fff;
+  border-radius: 98rpx; */
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.item{
+  /* padding: 40rpx 20rpx; */
+  height: 80rpx;
+}

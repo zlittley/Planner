@@ -1,0 +1,40 @@
+<view class="container">
+  <view class="section">
+    <view class="item">
+      <input placeholder="目标标题" placeholder-class="item-info"></input>
+    </view>
+  </view>
+  <view class="section">
+    <view class="item">
+      <view class="item-info">目标完成度统计类别:</view>
+      <view class="radio-container">
+        <radio-group bindchange="radioChange">
+         <view wx:for="{{goalCountTypes}}">
+          <radio id="{{item.name}}" value="{{item.name}}" checked="{{item.checked}}" data-id="{{item.index}}"></radio>
+          <text>{{item.name}}</text>
+         </view>
+        </radio-group>
+      </view>      
+    </view>
+    <view class="divLine"></view>
+    <view class="item">
+      <!-- 跟据选择的radio显示不同tab页 -->
+      <view hidden="{{!goalCountTypes[0].checked}}">
+        <view class="item-info">数量</view>
+      </view>
+      <view hidden="{{!goalCountTypes[1].checked}}">
+        <view class="item-info">时间</view>
+      </view>
+      <view hidden="{{!goalCountTypes[2].checked}}">
+        <view class="item-info">百分比</view>
+      </view>
+    </view>
+  </view>
+  <view class="section">
+    <textarea placeholder="描述" placeholder-class="item-info"></textarea>
+  </view>
+  <view class="btn-container"> 
+    <button class="btn-cancel">取消</button>
+    <button class="btn-confirm">确定</button>
+  </view>  
+</view>
