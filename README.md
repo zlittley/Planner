@@ -3,6 +3,6 @@
 ### 项目概述：
 Planner是一款具备手账功能的时间管理微信小程序。拥有优雅的界面。
 ### 版本：
-项目Alpha迭代中...
+项目处于Beta迭代阶段中...
 ### GitHub地址：
 <https://github.com/zlittley/Planner>
