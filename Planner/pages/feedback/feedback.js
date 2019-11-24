@@ -5,9 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    info:''
   },
 
+  textinput: function(e){
+    var content=e.detail.value;
+    var cnt=parseInt(content.length);
+    this.setData({info:cnt})
+  },
   /**
    * 生命周期函数--监听页面加载
    */

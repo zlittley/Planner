@@ -1,1 +1,38 @@
 /* pages/feedback/feedback.wxss */
+.lunbo{
+  width: 100%
+}
+
+.image{
+  width: 100%
+}
+
+textarea {
+  width: 320px;
+  height: 320rpx;
+  position: relative;
+  border: 1px solid white;
+  margin-top: 10px;
+}
+
+.botsum{
+  position: absolute;
+  top: 300rpx;
+  font-size: 25rpx;
+}
+
+.section{
+  padding: 10px 5px;
+}
+
+button{
+  height: 80rpx;
+  width: 400rpx;
+  margin-top: 50rpx;
+  background-color: #fff;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
