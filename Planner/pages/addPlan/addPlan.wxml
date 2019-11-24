@@ -21,24 +21,50 @@
       <text class="item-info">结束时间：</text>
       <view class="picker-container">
         <picker mode="date" bindchange="bindDateToChange" value="date_to">
-        <view class="picker">{{date_to}}</view>
-      </picker>
-      <picker mode="time" bindchange="bindTimeToChange" value="time_to">
-        <view class="picker">{{time_to}}</view>
-      </picker>
+          <view class="picker">{{date_to}}</view>
+        </picker>
+        <picker mode="time" bindchange="bindTimeToChange" value="time_to">
+          <view class="picker">{{time_to}}</view>
+        </picker>
       </view>
     </view>    
   </view>
   <view class="section">
     <navigator class="item" url="#">
       <view class="item-info">重复</view>
-      <image src="../../icons/more.png" class="icon-more"></image>
+      <view class="picker-container">
+        <view class="item-info value">{{repeat}}</view>
+        <image src="../../icons/more.png" class="icon-more"></image>
+      </view>
     </navigator> 
     <view class="divLine"></view>
     <navigator class="item" url="#">
       <view class="item-info">提醒</view>
-      <image src="../../icons/more.png" class="icon-more"></image>
+      <view class="picker-container">
+        <view class="item-info value">{{alarm}}</view>
+        <image src="../../icons/more.png" class="icon-more"></image>
+      </view>      
     </navigator> 
+  </view>
+  <view class="section">
+    <navigator class="item" url="#">
+      <view class="item-info">所属目标</view>
+      <view class="picker-container">
+        <view class="item-info value">{{goal}}</view>
+        <image src="../../icons/more.png" class="icon-more"></image>
+      </view>
+    </navigator>
+    <view class="divLine"></view>
+    <navigator class="item" url="#">
+      <view class="item-info">计划类型</view>
+      <view class="picker-container">
+        <image src="../../icons/planType/{{icon}}" class="icon-plantype"></image>
+        <picker range="{{planTypes}}" bindchange="bindPlanTypeChange" value="type">
+          <view class="item-info value">{{type}}</view>
+        </picker>        
+        <image src="../../icons/more.png" class="icon-more"></image>
+      </view>
+    </navigator>
   </view>
   <view class="section">
     <view class="item">

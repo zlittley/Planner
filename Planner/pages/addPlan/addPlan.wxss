@@ -34,6 +34,11 @@
   width: 25rpx;
 }
 
+.icon-plantype{
+  height: 30rpx;
+  width: 30rpx;
+}
+
 .picker{
   padding: 0 20rpx;
   font-size: 28rpx;
@@ -45,14 +50,19 @@
   justify-content: space-between; 
 }
 
+.value{
+  margin: 0 30rpx 0 10rpx;
+}
+
 textarea{
   padding: 20rpx;
+  height: 120rpx;
 }
 
 button {
   height: 80rpx;
   width: 400rpx;
-  margin-top: 50rpx;
+  margin-top: 30rpx;
   background-color: #fff;
   border-radius: 98rpx;
   display: flex;
