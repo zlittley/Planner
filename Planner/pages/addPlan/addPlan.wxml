@@ -1,17 +1,18 @@
 <view class=".container">
+<form bindsubmit="confirmSubmit">
   <view class="section">
     <view class="item">
-      <input placeholder="计划名称" placeholder-class="item-info"></input>
+      <input name="name" placeholder="计划名称" placeholder-class="item-info"></input>
     </view>    
   </view>
   <view class="section">
     <view class="item">
       <text class="item-info">开始时间：</text>
       <view class="picker-container">
-        <picker mode="date" bindchange="bindDateFromChange" value="date_from">
+        <picker name="date_from" value="{{date_from}}" mode="date" bindchange="bindDateFromChange">
         <view class="picker">{{date_from}}</view>
       </picker>
-      <picker mode="time" bindchange="bindTimeFromChange" value="time_from">
+      <picker name="time_from" value="{{time_from}}" mode="time" bindchange="bindTimeFromChange">
         <view class="picker">{{time_from}}</view>
       </picker>
       </view>
@@ -20,10 +21,10 @@
     <view class="item">
       <text class="item-info">结束时间：</text>
       <view class="picker-container">
-        <picker mode="date" bindchange="bindDateToChange" value="date_to">
+        <picker name="date_to" value="{{date_to}}" mode="date" bindchange="bindDateToChange">
           <view class="picker">{{date_to}}</view>
         </picker>
-        <picker mode="time" bindchange="bindTimeToChange" value="time_to">
+        <picker name="time_to" value="{{time_to}}" mode="time" bindchange="bindTimeToChange">
           <view class="picker">{{time_to}}</view>
         </picker>
       </view>
@@ -59,8 +60,8 @@
       <view class="item-info">计划类型</view>
       <view class="picker-container">
         <image src="../../icons/planType/{{icon}}" class="icon-plantype"></image>
-        <picker range="{{planTypes}}" bindchange="bindPlanTypeChange" value="type">
-          <view class="item-info value">{{type}}</view>
+        <picker name="type" value="{{type}}" range="{{planTypes}}" bindchange="bindPlanTypeChange">
+          <view class="item-info value">{{planTypes[type]}}</view>
         </picker>        
         <image src="../../icons/more.png" class="icon-more"></image>
       </view>
@@ -68,11 +69,12 @@
   </view>
   <view class="section">
     <view class="item">
-      <input placeholder="地点" placeholder-class="item-info"></input>
+      <input name="location" placeholder="地点" placeholder-class="item-info"></input>
     </view>
   </view>
   <view class="section">
-    <textarea placeholder="描述" placeholder-class="item-info"></textarea>
+    <textarea name="desc" placeholder="描述" placeholder-class="item-info"></textarea>
   </view>
-  <button bindtap="confirmAdd">确认添加</button>
+  <button form-type="submit">确认添加</button>
+</form>
 </view>

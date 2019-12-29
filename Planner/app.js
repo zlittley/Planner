@@ -5,6 +5,11 @@ const defaultTime = {
 //app.js
 App({
   onLaunch: function () {
+    //云开发初始化
+    wx.cloud.init({
+      env: 'joker-planner-7wzwj',
+      traceUser: true
+    })
     //影藏系统tabBar
     wx.hideTabBar();
     //获取设备信息

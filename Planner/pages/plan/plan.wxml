@@ -1,23 +1,54 @@
 <view class="container">
-  <!-- 怎么解决？ -->
-  <!-- <view class="date">2019年11月11日</view> -->
-  <!-- 用5层三目运算符嵌套实现动态显示边框颜色，不好 -->
-  <view wx:for="{{array_plan}}" class="section" style="border-left: {{(item.type=='工作')?array_color[0]:(item.type=='学习')?array_color[1]:(item.type=='娱乐')?array_color[2]:(item.type=='运动')?array_color[3]:(item.type=='休息')?array_color[4]:array_color[5]}} 15rpx solid">
-    <view class="plan-container">
-      <checkbox checked="item.isCompleted"></checkbox>
-      <view class="plan-time">
-        <!-- <text>{{item.date_from}} {{item.time_from}}</text>
-        <text>{{item.date_to}} {{item.time_to}}</text> -->
-        <text>{{item.time_from}}</text>
-        <text>{{item.time_to}}</text>
-      </view>
-      <text class="plan-name">{{item.name}}</text>    
+<scroll-view scroll-y>
+
+
+  <!-- 日期循环 -->
+  <view wx:if="{{array_date.length == 0 && array_plan.length == 0}}" class="no-plan"><text>当前还没有计划，快去创建一个吧！</text></view>
+  <view wx:for="{{array_date}}" wx:for-item="item_date" wx:for-index="i">
+    <view class="date fade-in">
+      <text>{{item_date.date}}</text>
+      <!-- <button><image src="../../icons/plan_more.png" class="icon-more"></image></button> -->
     </view>
-    <!-- <view class="icon-container">
-      <view class="divLine-vertical"></view>
-      <navigator><image src="../../icons/plan_more.png" class="icon-more"></image></navigator>
-    </view> -->
-    <navigator><image src="../../icons/plan_more.png" class="icon-more"></image></navigator>
+    <!-- 计划循环 -->
+    <view>
+      <view wx:for="{{array_plan}}">
+        <view wx:if="{{item.dateid==item_date._id}}" class="section fade-in {{item.isCompleted?'border-completed':''}}" style="border-left: {{array_color[item.type]}} 15rpx solid">
+          <view class="plan-container">
+            <checkbox bindtap="checkboxChange" checked="{{item.isCompleted?true:''}}" data-index="{{index}}"></checkbox>
+            <view class="plan-time">
+              <!-- <text>{{item.date_from}} {{item.time_from}}</text>
+              <text>{{item.date_to}} {{item.time_to}}</text> -->
+              <text class="{{item.isCompleted?'plan-name-completed':''}}">{{item.time_from}}</text>
+              <text class="{{item.isCompleted?'plan-name-completed':''}}">{{item.time_to}}</text>
+            </view>
+            <text class="plan-name {{item.isCompleted?'plan-name-completed':''}}">{{item.name}}</text>    
+          </view>
+          <!-- <view class="icon-container">
+            <view class="divLine-vertical"></view>
+            <navigator><image src="../../icons/plan_more.png" class="icon-more"></image></navigator>
+          </view> -->
+          <navigator bindtap="toggleDialog" data-index="{{index}}" data-i="{{i}}"><image src="../../icons/plan_more.png" class="icon-more"></image></navigator>
+        </view>
+      </view>
+    </view>
   </view>
+
+  </scroll-view>
+
+
+  <!-- 弹窗和蒙板 -->
+  <view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}">
+    <view class="zan-dialog__mask" bindtap="toggleDialog"></view>
+    <view class="zan-dialog__container">
+      <view>
+        <navigator bindtap="modifyPlan" style="border-bottom: #dddddd 1px solid">修改计划</navigator>
+        <!-- <view class="divLine"></view> -->
+        <navigator bindtap="deletePlan">删除计划</navigator>
+      </view>
+    </view>
+  </view>
+
+
+
 </view>
 <tabbar tabbar="{{tabbar}}"></tabbar>

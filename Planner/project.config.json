@@ -1,5 +1,6 @@
 {
 	"description": "项目配置文件",
+	"cloudfunctionRoot": "cloudfunctions/",
 	"packOptions": {
 		"ignore": []
 	},
@@ -13,7 +14,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.9.1",
-	"appid": "wxcc6966faaf97a148",
+	"appid": "wx9b0bdc45c449dde7",
 	"projectname": "Planner",
 	"debugOptions": {
 		"hidedInDevtools": []
